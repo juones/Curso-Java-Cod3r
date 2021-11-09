@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;jdbc.DesafioAtualizarRegistro&apos; to &apos;AlterarNomePessoa&apos;&#x0A;- Original project: &apos;exercicios&apos;&#x0A;- Original element: &apos;jdbc.DesafioAtualizarRegistro&apos;&#x0A;- Renamed element: &apos;jdbc.AlterarNomePessoa&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;DesafioAtualizarRegistro&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;jdbc{DesafioAtualizarRegistro.java[DesafioAtualizarRegistro" matchStrategy="1" name="AlterarNomePessoa" qualified="false" references="true" similarDeclarations="false" stamp="1615302927875" textual="false" version="1.0"/>
+</session>

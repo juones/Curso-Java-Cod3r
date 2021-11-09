@@ -1,0 +1,13 @@
+package generics;
+
+public class caixaTeste {
+	
+	public static void main(String[] args) {
+		
+		Caixa <String> caixaA = new Caixa<>();
+		caixaA.guardar("Hello Generics");
+		System.out.println(caixaA.abrir());
+		
+	}
+
+}

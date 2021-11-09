@@ -1,0 +1,12 @@
+package generics;
+
+public class caixaObjetoTeste {
+	
+	public static void main(String[] args) {
+		CaixaObjeto caixaA = new CaixaObjeto();
+		caixaA.guardar(2.3); //double -> Double (transform em wrapper automaticamente)
+		
+		Integer coisa = (Integer)caixaA.abrir();
+	}
+
+}

@@ -1,0 +1,9 @@
+package generics;
+
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+public class Pares <C, V>{
+
+	private final SortedSet <Par <C, V>> itens = new TreeSet<>(); //utilizato o TreeSet para trazer a ordem de seção
+}

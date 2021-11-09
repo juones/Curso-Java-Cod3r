@@ -1,0 +1,12 @@
+package generics;
+
+import java.util.List;
+
+public class ListaUtil {
+	
+	//a ? no generics indica que a lista pode ser de qualquer tipo
+	public static Object getUltimo1(List<?> lista) {
+		return lista.get(lista.size() -1);
+	}
+
+}

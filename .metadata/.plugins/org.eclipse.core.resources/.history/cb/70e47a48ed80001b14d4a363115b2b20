@@ -1,0 +1,58 @@
+package jdbc;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class AlterarNomePessoa {
+	
+	//update pessoas set nome = 'xxx' where codigo = xxx;
+	public static void main(String[] args) throws SQLException {
+		
+		Scanner entrada = new Scanner(System.in);
+		
+		System.out.println("Insira o codigo da pessoa que deseja alterar: ");
+		
+		int codigo = entrada.nextInt();
+		
+//		System.out.println("Digite o novo nome: ");
+//		
+//		String novoNome = entrada.nextLine();
+		
+		String sql = "SELECT codigo, nome FROM pessoas WHERE codigo = ?";
+		Connection conexao = FabricaConexao.getConexao();
+		
+		//String sql = "UPDATE pessoas SET nome ? WHERE cogido = ?";
+		
+		
+		PreparedStatement stmt = conexao.prepareStatement(sql);
+		//stmt.setString(1, "% '" + novoNome + "'%");
+		stmt.setInt(1, codigo);
+		ResultSet r = stmt.executeQuery();
+		
+		if (r.next()) {
+			Pessoa p = new Pessoa(r.getInt(1), r.getString(2));
+			System.out.println("O nome atual é: " + p.getNome());
+		}
+		
+//		System.out.println("Item " + codigo + " atualizado para " + novoNome);
+		
+//		List<Pessoa> pessoas = new ArrayList<>();
+		
+//		while(resultado.next()) {
+//			int codigo = resultado.getInt("codigo");
+//			String nome = resultado.getString("nome");
+//			pessoas.add(new Pessoa(codigo, nome));
+//		}
+//		
+//		for(Pessoa p: pessoas) {
+//			System.out.println(p.getCodigo() + " ==> " + p.getNome());
+//		}
+		conexao.close();
+		entrada.close();
+		
+	}
+
+}

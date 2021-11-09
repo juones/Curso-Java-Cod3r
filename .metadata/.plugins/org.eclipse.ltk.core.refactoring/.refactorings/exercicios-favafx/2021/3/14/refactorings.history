@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;exercicios-favafx/src/basico/Contator.css&apos; to &apos;Contador.css&apos;" description="Rename resource &apos;Contator.css&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/basico/Contator.css" name="Contador.css" stamp="1617036330872" updateReferences="true"/>
+</session>

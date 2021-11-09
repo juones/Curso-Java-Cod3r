@@ -1,0 +1,15 @@
+package generics;
+
+public class CaixaNumeroTeste {
+	
+	public static void main(String[] args) {
+		
+		CaixaNumero caixaA = new CaixaNumero<Number>();
+		
+		caixaA.guardar(1);
+		
+		Number coisaA = caixaA.abrir();
+		System.out.println(coisaA);
+	}
+
+}
